@@ -9,6 +9,6 @@ import com.example.service.domain.Product;
 public interface BuySideService {
 	@SuppressWarnings("rawtypes")
 	HashMap<String,List> findBuyData();
-	@SuppressWarnings("rawtypes")
-	HashMap<String, List> createBuyData(Orderer customer, Product product);
+
+	void createBuyData(Orderer customer, Product product);
 }

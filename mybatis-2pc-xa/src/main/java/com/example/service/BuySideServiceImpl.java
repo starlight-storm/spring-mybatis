@@ -1,11 +1,14 @@
 package com.example.service;
 
+import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import com.example.service.domain.Orderer;
 import com.example.service.domain.Product;
@@ -23,11 +26,8 @@ public class BuySideServiceImpl implements BuySideService {
 	
 	@SuppressWarnings("rawtypes")
 	public HashMap<String,List> findBuyData() {
-		List<Orderer> oderers = ordererRepository.findOrderers();
-		//oderers.forEach(System.out::println);
-		
+		List<Orderer> oderers = ordererRepository.findOrderers();		
 		List<Product> products = productRepository.findProducts();
-		//products.forEach(System.out::println);
 		
 		return new HashMap<String, List>() {
 			private static final long serialVersionUID = 1L;
@@ -35,10 +35,8 @@ public class BuySideServiceImpl implements BuySideService {
 		};
 	}
 
-	@SuppressWarnings("rawtypes")
-	public HashMap<String,List> createBuyData(Orderer orderer, Product product) {
+	public void createBuyData(Orderer orderer, Product product) {
 		ordererRepository.createOrderer(orderer);
 		productRepository.createProduct(product);
-		return findBuyData();
 	}
 }
