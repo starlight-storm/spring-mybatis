@@ -1,7 +1,16 @@
 Spring BootでMyBatisを利用して、2PCを行うサンプル
 ====
 JTA/XAとして、Atomikosを利用。  
-仕様：OrdererとProductの2つのDB（TBL名も同じ）をINSERT、SELECTします。
+仕様：OrdererとProductの2つのDB（TBL名も同じ）をINSERT、SELECTします。  
+
+## 使い方
+(1)Spring Bootを起動  
+(2)Advanced REST Clientを使って、以下のURLをGET。  
+http://localhost:8080/v1/buydata  
+(3)データが２件取得できることを確認。  
+(4)Advanced REST Clientを使って、上記のURLをPOST。データ例は以下の通り。  
+{"orderer":{"id":"8","firstName":"A","lastName":"Z", "shippingCode":"999"},"product":{"code":"999","name":"Note"}}    
+(5)(2)を再度行い、データが３件になっていることを確認。あわせて、コンソールに出力されているログで、XAトランザクションが正常に動作していることを確認。
 
 ## 参照
 こちらも参照してください。　　
