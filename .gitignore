@@ -3,5 +3,5 @@ Servers
 .recommenders
 RemoteSystemsTempFiles
 .DS_Store
-transaction-logs
-bin
+transaction-logs/
+bin/
