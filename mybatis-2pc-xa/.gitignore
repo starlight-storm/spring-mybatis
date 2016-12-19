@@ -8,6 +8,8 @@ target/
 .project
 .settings
 .springBeans
+bin/
+transaction-logs/
 
 ### IntelliJ IDEA ###
 .idea
