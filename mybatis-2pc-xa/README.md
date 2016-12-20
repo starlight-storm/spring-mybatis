@@ -1,7 +1,8 @@
 Spring BootでMyBatisを利用して、2PCを行うサンプル
 ====
 JTA/XAとして、Atomikosを利用。  
-仕様：OrdererとProductの2つのDB（TBL名も同じ）をINSERT、SELECTします。  
+仕様：OrdererとProductの2つのDB（TBL名も同じ）をINSERT、SELECTします。 
+※ H2に依存している部分もあり、その辺を今後修正予定。 
 
 ## 使い方
 (1)Spring Bootを起動  

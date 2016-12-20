@@ -20,6 +20,7 @@ public class DataSourceConfig {
 	private XADataSourceWrapper wrapper;
 	
 	public DataSource createDataSource(DbProperties dbp) throws Exception {
+		// この辺、H2のJdbcDataSourceに依存しているので、今後修正
 		JdbcDataSource xaDataSource = new JdbcDataSource();
 		xaDataSource.setUrl(dbp.getUrl());
 		xaDataSource.setUser(dbp.getUser());
