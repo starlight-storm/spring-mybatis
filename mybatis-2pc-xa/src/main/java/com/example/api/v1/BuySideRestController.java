@@ -19,7 +19,7 @@ import com.example.service.BuySideService;
  * 確認用に作ったRestContorllerのため、簡易な作りであることは、ご了承ください。
  */
 @RestController
-@RequestMapping("/v1/buydata")
+@RequestMapping("/v1/buydatas")
 public class BuySideRestController {
 	@Autowired
 	private BuySideService buySideService;
