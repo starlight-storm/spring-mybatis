@@ -5,7 +5,7 @@ JTA/XAとして、Atomikosを利用。
 ※ H2に依存している部分もあり、その辺を今後修正予定。 
 
 ## 使い方
-(1)Spring Bootを起動  
+(1)Spring Bootを起動（H2も自動で立ち上がります）  
 (2)Advanced REST Clientを使って、以下のURLをGET。  
 http://localhost:8080/v1/buydatas  
 (3)データが２件取得できることを確認。  
