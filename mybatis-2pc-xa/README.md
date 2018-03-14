@@ -7,7 +7,7 @@ JTA/XAとして、Atomikosを利用。
 ## 使い方
 (1)Spring Bootを起動  
 (2)Advanced REST Clientを使って、以下のURLをGET。  
-http://localhost:8080/v1/buydata  
+http://localhost:8080/v1/buydatas  
 (3)データが２件取得できることを確認。  
 (4)Advanced REST Clientを使って、上記のURLをPOST。データ例は以下の通り。  
 {"orderer":{"id":"8","firstName":"A","lastName":"Z", "shippingCode":"999"},"product":{"code":"999","name":"Note"}}    
